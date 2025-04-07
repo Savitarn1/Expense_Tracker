@@ -24,7 +24,7 @@ const Form = ({index, addItems}:Props) => {
 
   const submitHandler = (data:FormData) => {
     addItems({id:index+1, ...data})
-    // reset()
+    reset()
   }
 
   return (
@@ -49,7 +49,7 @@ const Form = ({index, addItems}:Props) => {
         </select>
         {errors.ctg && <p className="text-red-500">{errors.ctg.message}</p>}
       </div>
-      <button type="submit" className="bg-blue-600 text-white px-2 py-1 rounded-md text-lg">Submit </button>
+      <button type="submit" className="bg-blue-600 text-white px-2 py-1 rounded-md text-lg">Submit</button>
     </form>
   )
 }
